@@ -1,0 +1,127 @@
+$fondo: #4f4f4f
+$fondo-nav: #5b5b5b
+$fondo-header: #3f3f3f
+$fuente-principal: 'Ubuntu', sans-serif
+$fuente-secundaria: 'Righteous', cursive
+$color-contraste: #F44336
+$color-general-texto: #f0f0f0
+$color-dark: #3f3f3f
+
+*
+    padding: 0px
+    margin: 0px
+    box-sizing: border-box
+
+body
+    background-color: $fondo-header
+    font-family: $fuente-principal
+
+nav
+    background-color: $fondo-nav
+    color: white
+    width: 100%
+    height: 60px
+    box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.4)
+    z-index: 2
+    position: relative
+
+
+nav h1 
+    font-family: $fuente-secundaria
+    display: inline-block
+    font-weight: 100
+    color: $color-contraste
+    background-color: $fondo-header
+    padding: 5px
+    border-radius: 8px
+    margin: 10px
+
+nav ul
+    list-style: none
+
+nav ul a 
+    color: $color-general-texto
+    text-decoration: none
+
+nav ul a:hover
+    color: $color-contraste
+
+nav ul li
+    float: right
+    margin-right: 10px
+    height: 60px
+    padding: 10px
+    padding-top: 20px
+nav ul li:hover
+    background-color: $color-dark
+header
+    background-color: $fondo-header
+    background-image: url("../../img/back-code.png")
+    background-position: center
+    background-attachment: fixed
+    background-size: cover
+    width: 100%
+    height: 400px
+    z-index: 1
+    text-align: center
+    padding-top: 100px
+    color: $color-general-texto
+
+.grad
+    width: 100%
+    height: 100px
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(63,63,63,1) 100%)
+    position: absolute
+    top: 360px
+
+.terminal
+    width: 400px
+    height: 230px
+    background-color: black
+    border-radius: 4px
+    overflow: hidden
+    box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.4)
+    color: $color-general-texto
+
+.terminal .barra
+    width: 100%
+    height: 30px
+    background-color: #D5D5D5
+.terminal .barra .btn-terminal
+    width: 16px
+    height: 16px
+    border-radius: 50%
+    background-color: red
+    margin: 7px
+    float: left
+.terminal p
+    padding: 5px
+button
+    padding: 10px
+    font-size: 1.1em
+    background-color: $color-contraste
+    border: 2px solid $color-contraste
+    border-bottom: 4px solid #E23832
+    border-radius: 8px
+    color: $color-general-texto
+    box-shadow: 0px 2px 2px 1px rgba(0,0,0,0.4)
+    cursor: pointer
+    outline: none
+button:hover
+    transform: scale(1.05)
+
+article
+    width: 80%
+    min-height: 400px
+    margin-left: 10%
+    padding: 10px
+
+footer
+    width: 100%
+    height: 40px
+    text-align: center
+    color: $color-general-texto
+    background-color: $fondo-nav
+    padding-top: 10px
+/* tablet */
+/* smartphone */
