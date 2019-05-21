@@ -1,9 +1,37 @@
 const $ = el => document.querySelector(el);
 const fecha = new Date();
-
+var activeMenu = false;
 $('#info-footer').innerText = 'Phaser 3 CLI By Gammafp • '+fecha.getFullYear();
 
+//boton de menu
+$('.btn-menu').addEventListener('click',e=>{
+    if(activeMenu){
+        activeMenu=false;
+        $('#titlePage').style.display='inline-block';
+        let col = document.getElementsByClassName('item-menu');
+        for(let i in col){
+            try{
+                col[i].style.display='none';
+            }
+            catch(err){}
+        }
+        
+    }
+    else{
+        activeMenu=true;
+        $('#titlePage').style.display='none';
+        let col = document.getElementsByClassName('item-menu');
+        for(let i in col){
+            try{
+                col[i].style.display='block';
+            }
+            catch(err){}
+        }
+        
+    }
+});
 
+//dibujo del terminal
 function createTerminal(arr = []){
     let terminal = document.createElement('div');
     terminal.className+='terminal';
