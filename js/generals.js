@@ -56,10 +56,30 @@ function createTerminal(arr = []){
     for(let i in arr){
         let p = document.createElement('p');
         p.innerText = ' >  '+arr[i];
+        if(i==arr.length-1){
+            p.style.display='inline-block';
+        }
         terminal.append(p);
     }
+    let pointer = document.createElement('p');
+    pointer.innerText=' |';
+    pointer.style.display='inline-block';
+    terminal.append(pointer);
+    parpadea(pointer);
     return terminal;
 }
-
+function parpadea(point){
+    let visible=true;
+    setInterval(()=>{
+        if(visible){
+            point.style.display='inline-block';
+            visible=false;
+        }
+        else{
+            point.style.display='none';
+            visible=true;
+        }
+    },500);
+}
 var lineas = ["npm install -g phaser3-cli-gamma","pg --new folderName","cd folderDirectory","pg --scene sceneName"];
 $('#terminal-container').append(createTerminal(lineas));
