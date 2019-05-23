@@ -111,10 +111,15 @@ header
 .targetInfo
     width: 100%
     min-height: 200px
+    margin-bottom: 80px
 .targetInfo-img
     width: 200px
     height: 200px
     float: left
+    text-align: center
+.targetInfo-img img
+    max-height: 150px
+    max-width: 150px
 .targetInfo-text
     width: calc(100% - 205px)
     height: 100%
@@ -149,6 +154,8 @@ footer
     color: $color-general-texto
     background-color: $color-dark
     padding-top: 10px
+    position: relative
+    bottom: 0px
 
 /* animaciones */
 
@@ -160,6 +167,7 @@ footer
         padding-top: 20px
     .targetInfo
         height: 300px
+        margin-bottom: 160px
     .targetInfo-img
         width: 100%
         height: 150px
@@ -183,8 +191,14 @@ footer
         margin-top: 80px
 /* smartphone */
 @media (max-width: 400px)
+    .targetInfo
+        margin-bottom: 220px
+    .targetInfo-img
+        margin-top: 80px
     .terminal
         margin-top: 40px
+    header
+        margin-bottom: -40px
     .terminal p
         font-size: 0.7em
     footer
