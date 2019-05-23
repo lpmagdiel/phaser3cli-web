@@ -82,4 +82,7 @@ function parpadea(point){
     },500);
 }
 var lineas = ["npm install -g phaser3-cli-gamma","pg --new folderName","cd folderDirectory","pg --scene sceneName"];
-$('#terminal-container').append(createTerminal(lineas));
+try{
+    $('#terminal-container').append(createTerminal(lineas));
+}
+catch(err){}

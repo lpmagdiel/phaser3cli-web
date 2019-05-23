@@ -127,12 +127,19 @@ header {
 .targetInfo {
   width: 100%;
   min-height: 200px;
+  margin-bottom: 80px;
 }
 
 .targetInfo-img {
   width: 200px;
   height: 200px;
   float: left;
+  text-align: center;
+}
+
+.targetInfo-img img {
+  max-height: 150px;
+  max-width: 150px;
 }
 
 .targetInfo-text {
@@ -177,6 +184,8 @@ footer {
   color: #f0f0f0;
   background-color: #3f3f3f;
   padding-top: 10px;
+  position: relative;
+  bottom: 0px;
 }
 
 /* animaciones */
@@ -190,6 +199,7 @@ footer {
 
   .targetInfo {
     height: 300px;
+    margin-bottom: 160px;
   }
 
   .targetInfo-img {
@@ -229,8 +239,20 @@ footer {
 }
 /* smartphone */
 @media (max-width: 400px) {
+  .targetInfo {
+    margin-bottom: 220px;
+  }
+
+  .targetInfo-img {
+    margin-top: 80px;
+  }
+
   .terminal {
     margin-top: 40px;
+  }
+
+  header {
+    margin-bottom: -40px;
   }
 
   .terminal p {
